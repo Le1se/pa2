@@ -1,10 +1,9 @@
-C:\Users\65656\.jdks\openjdk-17.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.2\lib\idea_rt.jar=57294:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.2\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\65656\Desktop\611\pa2\out\production\pa2 Project
 -- * Network Simulator v1.0 * --
 Enter number of messages to simulate (> 0): [10] 100
 Enter packet loss probability (0.0 for no loss): [0.0] 0.1
 Enter packet corruption probability (0.0 for no corruption): [0.0] 0.1
 Enter average time between messages from sender's layer 5 (> 0.0): [1000] 200
-Enter window size (> 0): [8]
+Enter window size (> 0): [8] 
 Enter retransmission timeout (>0.0) [15.0] 30
 Enter trace level (>= 0): [0] 3
 Enter random seed: [0] 1234
@@ -29,12 +28,11 @@ A send packet with seqnum:0 for first time.
 EVENT time: 45.66060365611743  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 47.569475386822106  type: 2  entity: 0
 stopTimer: stopping timer at 47.569475386822106
-Window moves 1
 
 EVENT time: 67.36045411542099  type: 1  entity: 0
 generateNextArrival(): called
@@ -90,18 +88,17 @@ startTimer: starting timer at 113.31553086947233
 EVENT time: 115.28290658284249  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: packet being lost
 
 EVENT time: 119.9642628254036  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 123.63374736777854  type: 2  entity: 0
 stopTimer: stopping timer at 123.63374736777854
-Window moves 2
 
 EVENT time: 238.65474410229803  type: 1  entity: 0
 generateNextArrival(): called
@@ -120,12 +117,11 @@ A send packet with seqnum:3 for first time.
 EVENT time: 241.6328928495132  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 249.96951200903345  type: 2  entity: 0
 stopTimer: stopping timer at 249.96951200903345
-Window moves 1
 
 EVENT time: 529.581591235084  type: 1  entity: 0
 generateNextArrival(): called
@@ -144,7 +140,7 @@ A send packet with seqnum:4 for first time.
 EVENT time: 536.3943601794488  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -166,7 +162,7 @@ startTimer: starting timer at 559.581591235084
 EVENT time: 565.8367870113224  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: packet being lost
 
 EVENT time: 589.581591235084  type: 0  entity: 0
@@ -183,12 +179,11 @@ startTimer: starting timer at 589.581591235084
 EVENT time: 590.6389965514084  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 594.7169103061005  type: 2  entity: 0
 stopTimer: stopping timer at 594.7169103061005
-Window moves 1
 
 EVENT time: 924.1126743369853  type: 1  entity: 0
 generateNextArrival(): called
@@ -207,12 +202,11 @@ A send packet with seqnum:5 for first time.
 EVENT time: 926.3525193029571  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 934.2645039216284  type: 2  entity: 0
 stopTimer: stopping timer at 934.2645039216284
-Window moves 1
 
 EVENT time: 1241.9812616351817  type: 1  entity: 0
 generateNextArrival(): called
@@ -231,12 +225,11 @@ A send packet with seqnum:6 for first time.
 EVENT time: 1247.7340922269357  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 1252.6571550645467  type: 2  entity: 0
 stopTimer: stopping timer at 1252.6571550645467
-Window moves 1
 
 EVENT time: 1468.8802758873255  type: 1  entity: 0
 generateNextArrival(): called
@@ -255,12 +248,11 @@ A send packet with seqnum:7 for first time.
 EVENT time: 1472.9024323252052  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 1481.3371074556717  type: 2  entity: 0
 stopTimer: stopping timer at 1481.3371074556717
-Window moves 1
 
 EVENT time: 1627.3689992980742  type: 1  entity: 0
 generateNextArrival(): called
@@ -279,12 +271,11 @@ A send packet with seqnum:8 for first time.
 EVENT time: 1634.7547227393413  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 1641.9119235816522  type: 2  entity: 0
 stopTimer: stopping timer at 1641.9119235816522
-Window moves 1
 
 EVENT time: 1801.1291848506119  type: 1  entity: 0
 generateNextArrival(): called
@@ -303,12 +294,11 @@ A send packet with seqnum:9 for first time.
 EVENT time: 1802.5637073885312  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 1810.6514786217842  type: 2  entity: 0
 stopTimer: stopping timer at 1810.6514786217842
-Window moves 1
 
 EVENT time: 1866.9148838770714  type: 1  entity: 0
 generateNextArrival(): called
@@ -327,12 +317,11 @@ A send packet with seqnum:10 for first time.
 EVENT time: 1870.9765923032319  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 1872.5663014618365  type: 2  entity: 0
 stopTimer: stopping timer at 1872.5663014618365
-Window moves 1
 
 EVENT time: 2218.2317575609604  type: 1  entity: 0
 generateNextArrival(): called
@@ -351,12 +340,11 @@ A send packet with seqnum:11 for first time.
 EVENT time: 2222.1382793664357  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 2225.687185277871  type: 2  entity: 0
 stopTimer: stopping timer at 2225.687185277871
-Window moves 1
 
 EVENT time: 2271.419415875728  type: 1  entity: 0
 generateNextArrival(): called
@@ -386,7 +374,7 @@ startTimer: starting timer at 2301.419415875728
 EVENT time: 2310.9755546739093  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -408,12 +396,11 @@ startTimer: starting timer at 2331.419415875728
 EVENT time: 2335.8033082064267  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 2345.4984282967616  type: 2  entity: 0
 stopTimer: stopping timer at 2345.4984282967616
-Window moves 1
 
 EVENT time: 2670.3329569383827  type: 1  entity: 0
 generateNextArrival(): called
@@ -432,12 +419,11 @@ A send packet with seqnum:13 for first time.
 EVENT time: 2677.9881282998135  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 2680.201330607013  type: 2  entity: 0
 stopTimer: stopping timer at 2680.201330607013
-Window moves 1
 
 EVENT time: 2705.600146488845  type: 1  entity: 0
 generateNextArrival(): called
@@ -456,7 +442,7 @@ A send packet with seqnum:14 for first time.
 EVENT time: 2714.5012054811236  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 2720.2368236335333  type: 1  entity: 0
@@ -475,7 +461,6 @@ A send packet with seqnum:15 for first time.
 
 EVENT time: 2724.013672292245  type: 2  entity: 0
 stopTimer: stopping timer at 2724.013672292245
-Window moves 1
 
 EVENT time: 2730.15140232551  type: 2  entity: 1
 Packet corruption at B.
@@ -498,7 +483,7 @@ A send packet with seqnum:16 for first time.
 EVENT time: 3080.628925443281  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 3088.048158207953  type: 2  entity: 0
@@ -525,27 +510,25 @@ startTimer: starting timer at 3102.298348948637
 EVENT time: 3111.896786400952  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 3114.0166020691545  type: 2  entity: 0
 stopTimer: stopping timer at 3114.0166020691545
-Window moves 1
 
 EVENT time: 3115.8170415356913  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 3117.801721243934  type: 2  entity: 0
 stopTimer: stopping timer at 3117.801721243934
 stopTimer: Warning: Unable to cancel your timer
-Window moves 1
 
 EVENT time: 3123.025543992431  type: 2  entity: 0
 
@@ -566,12 +549,11 @@ A send packet with seqnum:17 for first time.
 EVENT time: 3336.550523392437  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 3338.048768578142  type: 2  entity: 0
 stopTimer: stopping timer at 3338.048768578142
-Window moves 1
 
 EVENT time: 3418.0120242927333  type: 1  entity: 0
 generateNextArrival(): called
@@ -590,12 +572,11 @@ A send packet with seqnum:18 for first time.
 EVENT time: 3420.1576586199526  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 3425.5825373088774  type: 2  entity: 0
 stopTimer: stopping timer at 3425.5825373088774
-Window moves 1
 
 EVENT time: 3508.8229010895107  type: 1  entity: 0
 generateNextArrival(): called
@@ -614,12 +595,11 @@ A send packet with seqnum:19 for first time.
 EVENT time: 3509.857234412671  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 3511.853450117496  type: 2  entity: 0
 stopTimer: stopping timer at 3511.853450117496
-Window moves 1
 
 EVENT time: 3624.5002594073303  type: 1  entity: 0
 generateNextArrival(): called
@@ -638,12 +618,11 @@ A send packet with seqnum:20 for first time.
 EVENT time: 3629.16595965453  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 3632.258919034394  type: 2  entity: 0
 stopTimer: stopping timer at 3632.258919034394
-Window moves 1
 
 EVENT time: 3722.2571489608445  type: 1  entity: 0
 generateNextArrival(): called
@@ -662,12 +641,11 @@ A send packet with seqnum:21 for first time.
 EVENT time: 3728.542558061464  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 3729.9073152867213  type: 2  entity: 0
 stopTimer: stopping timer at 3729.9073152867213
-Window moves 1
 
 EVENT time: 4099.990844447157  type: 1  entity: 0
 generateNextArrival(): called
@@ -686,12 +664,11 @@ A send packet with seqnum:22 for first time.
 EVENT time: 4107.884426404614  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 4112.414990691854  type: 2  entity: 0
 stopTimer: stopping timer at 4112.414990691854
-Window moves 1
 
 EVENT time: 4157.353434858241  type: 1  entity: 0
 generateNextArrival(): called
@@ -710,12 +687,11 @@ A send packet with seqnum:23 for first time.
 EVENT time: 4163.485854670857  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 4167.684621723075  type: 2  entity: 0
 stopTimer: stopping timer at 4167.684621723075
-Window moves 1
 
 EVENT time: 4289.657277138584  type: 1  entity: 0
 generateNextArrival(): called
@@ -734,12 +710,11 @@ A send packet with seqnum:24 for first time.
 EVENT time: 4297.271523178807  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 4300.715781121249  type: 2  entity: 0
 stopTimer: stopping timer at 4300.715781121249
-Window moves 1
 
 EVENT time: 4348.277230140079  type: 1  entity: 0
 generateNextArrival(): called
@@ -758,7 +733,7 @@ A send packet with seqnum:25 for first time.
 EVENT time: 4351.79262672811  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: packet being lost
 
 EVENT time: 4378.277230140079  type: 0  entity: 0
@@ -775,7 +750,7 @@ startTimer: starting timer at 4378.277230140079
 EVENT time: 4384.5675832392335  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: packet being lost
 
 EVENT time: 4402.1118808557385  type: 1  entity: 0
@@ -813,12 +788,11 @@ startTimer: starting timer at 4432.1118808557385
 EVENT time: 4440.652302621539  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 4445.491866817224  type: 2  entity: 0
 stopTimer: stopping timer at 4445.491866817224
-Window moves 1
 
 EVENT time: 4628.180791650136  type: 1  entity: 0
 generateNextArrival(): called
@@ -837,7 +811,7 @@ A send packet with seqnum:27 for first time.
 EVENT time: 4635.0300912503435  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: packet being lost
 
 EVENT time: 4658.180791650136  type: 0  entity: 0
@@ -862,7 +836,7 @@ startTimer: starting timer at 4658.180791650136
 EVENT time: 4666.11584826197  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -897,12 +871,11 @@ Packet corruption at B.
 EVENT time: 4699.42744224372  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 4701.334665974913  type: 2  entity: 0
 stopTimer: stopping timer at 4701.334665974913
-Window moves 2
 
 EVENT time: 4808.081301309244  type: 1  entity: 0
 generateNextArrival(): called
@@ -932,12 +905,11 @@ startTimer: starting timer at 4838.081301309244
 EVENT time: 4847.792901394696  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 4849.3518478957485  type: 2  entity: 0
 stopTimer: stopping timer at 4849.3518478957485
-Window moves 1
 
 EVENT time: 4868.385876033814  type: 1  entity: 0
 generateNextArrival(): called
@@ -972,7 +944,7 @@ startTimer: starting timer at 4898.385876033814
 EVENT time: 4901.710104678487  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -996,12 +968,11 @@ A send packet with seqnum:30 for first time.
 EVENT time: 4926.169133579516  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 4928.400738547929  type: 2  entity: 0
 stopTimer: stopping timer at 4928.400738547929
-Window moves 2
 
 EVENT time: 5148.081911679434  type: 1  entity: 0
 generateNextArrival(): called
@@ -1020,12 +991,11 @@ A send packet with seqnum:31 for first time.
 EVENT time: 5152.1993774224065  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 5161.553636280404  type: 2  entity: 0
 stopTimer: stopping timer at 5161.553636280404
-Window moves 1
 
 EVENT time: 5341.752372814112  type: 1  entity: 0
 generateNextArrival(): called
@@ -1044,7 +1014,7 @@ A send packet with seqnum:32 for first time.
 EVENT time: 5343.521439252908  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: packet being lost
 
 EVENT time: 5371.752372814112  type: 0  entity: 0
@@ -1061,12 +1031,11 @@ startTimer: starting timer at 5371.752372814112
 EVENT time: 5375.81600390637  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 5385.146641438033  type: 2  entity: 0
 stopTimer: stopping timer at 5385.146641438033
-Window moves 1
 
 EVENT time: 5631.238746299631  type: 1  entity: 0
 generateNextArrival(): called
@@ -1085,12 +1054,11 @@ A send packet with seqnum:33 for first time.
 EVENT time: 5641.149204992828  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 5645.437513351848  type: 2  entity: 0
 stopTimer: stopping timer at 5645.437513351848
-Window moves 1
 
 EVENT time: 5999.414044618061  type: 1  entity: 0
 generateNextArrival(): called
@@ -1125,12 +1093,11 @@ startTimer: starting timer at 6029.414044618061
 EVENT time: 6031.375377666554  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 6039.0618610187075  type: 2  entity: 0
 stopTimer: stopping timer at 6039.0618610187075
-Window moves 1
 
 EVENT time: 6375.267799920652  type: 1  entity: 0
 generateNextArrival(): called
@@ -1149,12 +1116,11 @@ A send packet with seqnum:35 for first time.
 EVENT time: 6377.1549729911185  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 6379.624713888973  type: 2  entity: 0
 stopTimer: stopping timer at 6379.624713888973
-Window moves 1
 
 EVENT time: 6401.83111056856  type: 1  entity: 0
 generateNextArrival(): called
@@ -1173,7 +1139,7 @@ A send packet with seqnum:36 for first time.
 EVENT time: 6404.401379436628  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: packet being lost
 
 EVENT time: 6431.83111056856  type: 0  entity: 0
@@ -1190,12 +1156,11 @@ startTimer: starting timer at 6431.83111056856
 EVENT time: 6438.241218298898  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 6445.409955137791  type: 2  entity: 0
 stopTimer: stopping timer at 6445.409955137791
-Window moves 1
 
 EVENT time: 6720.578630939664  type: 1  entity: 0
 generateNextArrival(): called
@@ -1214,12 +1179,11 @@ A send packet with seqnum:37 for first time.
 EVENT time: 6728.749900814843  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 6736.11584826197  type: 2  entity: 0
 stopTimer: stopping timer at 6736.11584826197
-Window moves 1
 
 EVENT time: 7088.644062623981  type: 1  entity: 0
 generateNextArrival(): called
@@ -1238,7 +1202,7 @@ A send packet with seqnum:38 for first time.
 EVENT time: 7091.164891506698  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -1260,12 +1224,11 @@ startTimer: starting timer at 7118.644062623981
 EVENT time: 7123.66682943205  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 7130.664448988311  type: 2  entity: 0
 stopTimer: stopping timer at 7130.664448988311
-Window moves 1
 
 EVENT time: 7473.6655781731615  type: 1  entity: 0
 generateNextArrival(): called
@@ -1284,7 +1247,7 @@ A send packet with seqnum:39 for first time.
 EVENT time: 7477.997283852656  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -1306,12 +1269,11 @@ startTimer: starting timer at 7503.6655781731615
 EVENT time: 7513.048127689443  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 7517.81188390759  type: 2  entity: 0
 stopTimer: stopping timer at 7517.81188390759
-Window moves 1
 
 EVENT time: 7763.945432905057  type: 1  entity: 0
 generateNextArrival(): called
@@ -1346,12 +1308,11 @@ startTimer: starting timer at 7793.945432905057
 EVENT time: 7801.069124423963  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 7805.197851496933  type: 2  entity: 0
 stopTimer: stopping timer at 7805.197851496933
-Window moves 1
 
 EVENT time: 8160.869167149876  type: 1  entity: 0
 generateNextArrival(): called
@@ -1370,12 +1331,11 @@ A send packet with seqnum:41 for first time.
 EVENT time: 8163.330393383587  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 8170.233252967925  type: 2  entity: 0
 stopTimer: stopping timer at 8170.233252967925
-Window moves 1
 
 EVENT time: 8342.442091128269  type: 1  entity: 0
 generateNextArrival(): called
@@ -1394,12 +1354,11 @@ A send packet with seqnum:42 for first time.
 EVENT time: 8349.058748130741  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 8355.42573320719  type: 2  entity: 0
 stopTimer: stopping timer at 8355.42573320719
-Window moves 1
 
 EVENT time: 8360.093997009186  type: 1  entity: 0
 generateNextArrival(): called
@@ -1429,12 +1388,11 @@ startTimer: starting timer at 8390.093997009186
 EVENT time: 8397.685171056246  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 8399.180120242927  type: 2  entity: 0
 stopTimer: stopping timer at 8399.180120242927
-Window moves 1
 
 EVENT time: 8524.21033356731  type: 1  entity: 0
 generateNextArrival(): called
@@ -1469,12 +1427,11 @@ startTimer: starting timer at 8554.21033356731
 EVENT time: 8559.037812433242  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 8562.177465132605  type: 2  entity: 0
 stopTimer: stopping timer at 8562.177465132605
-Window moves 1
 
 EVENT time: 8772.276985992004  type: 1  entity: 0
 generateNextArrival(): called
@@ -1515,12 +1472,11 @@ startTimer: starting timer at 8832.276985992004
 EVENT time: 8834.548966948454  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 8836.477065340128  type: 2  entity: 0
 stopTimer: stopping timer at 8836.477065340128
-Window moves 1
 
 EVENT time: 8879.384746848964  type: 1  entity: 0
 generateNextArrival(): called
@@ -1539,7 +1495,7 @@ A send packet with seqnum:46 for first time.
 EVENT time: 8887.936704611348  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -1561,7 +1517,7 @@ startTimer: starting timer at 8909.384746848964
 EVENT time: 8912.78862880337  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: packet being lost
 
 EVENT time: 8939.384746848964  type: 0  entity: 0
@@ -1578,12 +1534,11 @@ startTimer: starting timer at 8939.384746848964
 EVENT time: 8948.540421765802  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 8951.499618518632  type: 2  entity: 0
 stopTimer: stopping timer at 8951.499618518632
-Window moves 1
 
 EVENT time: 9039.887691885127  type: 1  entity: 0
 generateNextArrival(): called
@@ -1602,12 +1557,11 @@ A send packet with seqnum:47 for first time.
 EVENT time: 9048.736289559616  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 9050.883022553176  type: 2  entity: 0
 stopTimer: stopping timer at 9050.883022553176
-Window moves 1
 
 EVENT time: 9299.343852046266  type: 1  entity: 0
 generateNextArrival(): called
@@ -1626,12 +1580,11 @@ A send packet with seqnum:48 for first time.
 EVENT time: 9305.591357158117  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 9315.480941190832  type: 2  entity: 0
 stopTimer: stopping timer at 9315.480941190832
-Window moves 1
 
 EVENT time: 9415.851313821833  type: 1  entity: 0
 generateNextArrival(): called
@@ -1650,7 +1603,7 @@ A send packet with seqnum:49 for first time.
 EVENT time: 9417.24463637196  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: packet being lost
 
 EVENT time: 9445.851313821833  type: 0  entity: 0
@@ -1667,12 +1620,11 @@ startTimer: starting timer at 9445.851313821833
 EVENT time: 9448.47871333964  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 9453.173802911466  type: 2  entity: 0
 stopTimer: stopping timer at 9453.173802911466
-Window moves 1
 
 EVENT time: 9466.585283974731  type: 1  entity: 0
 generateNextArrival(): called
@@ -1691,12 +1643,11 @@ A send packet with seqnum:50 for first time.
 EVENT time: 9469.294808801538  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 9478.519425031282  type: 2  entity: 0
 stopTimer: stopping timer at 9478.519425031282
-Window moves 1
 
 EVENT time: 9596.508682515947  type: 1  entity: 0
 generateNextArrival(): called
@@ -1715,7 +1666,7 @@ A send packet with seqnum:51 for first time.
 EVENT time: 9599.311868648336  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: packet being lost
 
 EVENT time: 9623.596911526842  type: 1  entity: 0
@@ -1734,12 +1685,11 @@ A send packet with seqnum:52 for first time.
 EVENT time: 9628.201086458937  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 9636.289956358532  type: 2  entity: 0
 stopTimer: stopping timer at 9636.289956358532
-Window moves 2
 
 EVENT time: 9819.196142460403  type: 1  entity: 0
 generateNextArrival(): called
@@ -1758,12 +1708,11 @@ A send packet with seqnum:53 for first time.
 EVENT time: 9828.165593432417  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 9834.108218634603  type: 2  entity: 0
 stopTimer: stopping timer at 9834.108218634603
-Window moves 1
 
 EVENT time: 10194.647053437911  type: 1  entity: 0
 generateNextArrival(): called
@@ -1782,12 +1731,11 @@ A send packet with seqnum:54 for first time.
 EVENT time: 10201.67159031953  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 10203.195928830837  type: 2  entity: 0
 stopTimer: stopping timer at 10203.195928830837
-Window moves 1
 
 EVENT time: 10251.106295968506  type: 1  entity: 0
 generateNextArrival(): called
@@ -1806,7 +1754,7 @@ A send packet with seqnum:55 for first time.
 EVENT time: 10255.890377513962  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: packet being lost
 
 EVENT time: 10281.106295968506  type: 0  entity: 0
@@ -1823,7 +1771,7 @@ startTimer: starting timer at 10281.106295968506
 EVENT time: 10284.580492568744  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: packet being lost
 
 EVENT time: 10311.106295968506  type: 0  entity: 0
@@ -1840,12 +1788,11 @@ startTimer: starting timer at 10311.106295968506
 EVENT time: 10312.196935941649  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 10321.417432172613  type: 2  entity: 0
 stopTimer: stopping timer at 10321.417432172613
-Window moves 1
 
 EVENT time: 10446.19281594287  type: 1  entity: 0
 generateNextArrival(): called
@@ -1880,12 +1827,11 @@ startTimer: starting timer at 10476.19281594287
 EVENT time: 10482.734214300974  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 10487.176061281167  type: 2  entity: 0
 stopTimer: stopping timer at 10487.176061281167
-Window moves 1
 
 EVENT time: 10823.54808191168  type: 1  entity: 0
 generateNextArrival(): called
@@ -1904,7 +1850,7 @@ A send packet with seqnum:57 for first time.
 EVENT time: 10828.95455793939  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -1937,12 +1883,11 @@ startTimer: starting timer at 10883.54808191168
 EVENT time: 10884.65932187872  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 10890.548936429945  type: 2  entity: 0
 stopTimer: stopping timer at 10890.548936429945
-Window moves 1
 
 EVENT time: 10973.015533921323  type: 1  entity: 0
 generateNextArrival(): called
@@ -1977,12 +1922,11 @@ startTimer: starting timer at 11003.015533921323
 EVENT time: 11011.898190252388  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 11014.878536332286  type: 2  entity: 0
 stopTimer: stopping timer at 11014.878536332286
-Window moves 1
 
 EVENT time: 11157.213049714652  type: 1  entity: 0
 generateNextArrival(): called
@@ -2001,12 +1945,11 @@ A send packet with seqnum:59 for first time.
 EVENT time: 11163.014770958585  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 11165.595202490309  type: 2  entity: 0
 stopTimer: stopping timer at 11165.595202490309
-Window moves 1
 
 EVENT time: 11281.789605395672  type: 1  entity: 0
 generateNextArrival(): called
@@ -2025,12 +1968,11 @@ A send packet with seqnum:60 for first time.
 EVENT time: 11285.18634601886  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 11291.706595049896  type: 2  entity: 0
 stopTimer: stopping timer at 11291.706595049896
-Window moves 1
 
 EVENT time: 11342.61909848323  type: 1  entity: 0
 generateNextArrival(): called
@@ -2049,12 +1991,11 @@ A send packet with seqnum:61 for first time.
 EVENT time: 11345.793359172338  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 11348.422956022827  type: 2  entity: 0
 stopTimer: stopping timer at 11348.422956022827
-Window moves 1
 
 EVENT time: 11524.05774101993  type: 1  entity: 0
 generateNextArrival(): called
@@ -2089,7 +2030,7 @@ startTimer: starting timer at 11554.05774101993
 EVENT time: 11557.56324961089  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: packet being lost
 
 EVENT time: 11584.05774101993  type: 0  entity: 0
@@ -2106,12 +2047,11 @@ startTimer: starting timer at 11584.05774101993
 EVENT time: 11591.912320322277  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 11595.449415570545  type: 2  entity: 0
 stopTimer: stopping timer at 11595.449415570545
-Window moves 1
 
 EVENT time: 11846.516312143316  type: 1  entity: 0
 generateNextArrival(): called
@@ -2130,12 +2070,11 @@ A send packet with seqnum:63 for first time.
 EVENT time: 11848.174962614827  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 11858.048615985595  type: 2  entity: 0
 stopTimer: stopping timer at 11858.048615985595
-Window moves 1
 
 EVENT time: 12017.603076265756  type: 1  entity: 0
 generateNextArrival(): called
@@ -2154,7 +2093,7 @@ A send packet with seqnum:64 for first time.
 EVENT time: 12025.491988891263  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: packet being lost
 
 EVENT time: 12047.603076265756  type: 0  entity: 0
@@ -2171,12 +2110,11 @@ startTimer: starting timer at 12047.603076265756
 EVENT time: 12050.15906247139  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 12056.472487563708  type: 2  entity: 0
 stopTimer: stopping timer at 12056.472487563708
-Window moves 1
 
 EVENT time: 12374.29120761742  type: 1  entity: 0
 generateNextArrival(): called
@@ -2195,12 +2133,11 @@ A send packet with seqnum:65 for first time.
 EVENT time: 12381.041627246925  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 12387.503921628468  type: 2  entity: 0
 stopTimer: stopping timer at 12387.503921628468
-Window moves 1
 
 EVENT time: 12403.9429914243  type: 1  entity: 0
 generateNextArrival(): called
@@ -2219,7 +2156,7 @@ A send packet with seqnum:66 for first time.
 EVENT time: 12407.394390697958  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: packet being lost
 
 EVENT time: 12433.9429914243  type: 0  entity: 0
@@ -2265,12 +2202,11 @@ A send packet with seqnum:67 for first time.
 EVENT time: 12494.883938108464  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 12499.282387768182  type: 2  entity: 0
 stopTimer: stopping timer at 12499.282387768182
-Window moves 2
 
 EVENT time: 12629.999694814906  type: 1  entity: 0
 generateNextArrival(): called
@@ -2289,12 +2225,11 @@ A send packet with seqnum:68 for first time.
 EVENT time: 12638.548356578265  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 12645.867336039308  type: 2  entity: 0
 stopTimer: stopping timer at 12645.867336039308
-Window moves 1
 
 EVENT time: 12655.024872585223  type: 1  entity: 0
 generateNextArrival(): called
@@ -2313,12 +2248,11 @@ A send packet with seqnum:69 for first time.
 EVENT time: 12658.835535752434  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 12665.523880733665  type: 2  entity: 0
 stopTimer: stopping timer at 12665.523880733665
-Window moves 1
 
 EVENT time: 13028.254036072878  type: 1  entity: 0
 generateNextArrival(): called
@@ -2337,12 +2271,11 @@ A send packet with seqnum:70 for first time.
 EVENT time: 13030.22937711722  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 13032.365672780541  type: 2  entity: 0
 stopTimer: stopping timer at 13032.365672780541
-Window moves 1
 
 EVENT time: 13398.94405957213  type: 1  entity: 0
 generateNextArrival(): called
@@ -2383,7 +2316,7 @@ startTimer: starting timer at 13458.94405957213
 EVENT time: 13467.575670644244  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: packet being lost
 
 EVENT time: 13488.94405957213  type: 0  entity: 0
@@ -2400,12 +2333,11 @@ startTimer: starting timer at 13488.94405957213
 EVENT time: 13489.961638233588  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 13493.654744102298  type: 2  entity: 0
 stopTimer: stopping timer at 13493.654744102298
-Window moves 1
 
 EVENT time: 13713.809625537888  type: 1  entity: 0
 generateNextArrival(): called
@@ -2424,12 +2356,11 @@ A send packet with seqnum:72 for first time.
 EVENT time: 13721.594439527573  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 13723.288521988585  type: 2  entity: 0
 stopTimer: stopping timer at 13723.288521988585
-Window moves 1
 
 EVENT time: 13998.51069673757  type: 1  entity: 0
 generateNextArrival(): called
@@ -2448,12 +2379,11 @@ A send packet with seqnum:73 for first time.
 EVENT time: 14003.271706289865  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 14011.677541428877  type: 2  entity: 0
 stopTimer: stopping timer at 14011.677541428877
-Window moves 1
 
 EVENT time: 14330.735190893276  type: 1  entity: 0
 generateNextArrival(): called
@@ -2472,12 +2402,11 @@ A send packet with seqnum:74 for first time.
 EVENT time: 14337.53175450911  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 14342.601763969848  type: 2  entity: 0
 stopTimer: stopping timer at 14342.601763969848
-Window moves 1
 
 EVENT time: 14604.43739127781  type: 1  entity: 0
 generateNextArrival(): called
@@ -2496,7 +2425,7 @@ A send packet with seqnum:75 for first time.
 EVENT time: 14606.849452192755  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: packet being lost
 
 EVENT time: 14634.43739127781  type: 0  entity: 0
@@ -2513,12 +2442,11 @@ startTimer: starting timer at 14634.43739127781
 EVENT time: 14640.383037812433  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 14643.342783898433  type: 2  entity: 0
 stopTimer: stopping timer at 14643.342783898433
-Window moves 1
 
 EVENT time: 14777.440717795344  type: 1  entity: 0
 generateNextArrival(): called
@@ -2553,12 +2481,11 @@ startTimer: starting timer at 14807.440717795344
 EVENT time: 14812.356364635152  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 14817.583483382672  type: 2  entity: 0
 stopTimer: stopping timer at 14817.583483382672
-Window moves 1
 
 EVENT time: 15008.343760490738  type: 1  entity: 0
 generateNextArrival(): called
@@ -2577,12 +2504,11 @@ A send packet with seqnum:77 for first time.
 EVENT time: 15010.905514694663  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 15012.073610644857  type: 2  entity: 0
 stopTimer: stopping timer at 15012.073610644857
-Window moves 1
 
 EVENT time: 15333.060701315348  type: 1  entity: 0
 generateNextArrival(): called
@@ -2601,12 +2527,11 @@ A send packet with seqnum:78 for first time.
 EVENT time: 15340.937253944518  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 15347.29874568926  type: 2  entity: 0
 stopTimer: stopping timer at 15347.29874568926
-Window moves 1
 
 EVENT time: 15676.23523667104  type: 1  entity: 0
 generateNextArrival(): called
@@ -2625,7 +2550,7 @@ A send packet with seqnum:79 for first time.
 EVENT time: 15682.538224433118  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -2660,23 +2585,21 @@ A send packet with seqnum:80 for first time.
 EVENT time: 15714.342234565263  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 15719.371868037964  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 15721.438734092226  type: 2  entity: 0
 stopTimer: stopping timer at 15721.438734092226
-Window moves 1
 
 EVENT time: 15728.171025727102  type: 2  entity: 0
 stopTimer: stopping timer at 15728.171025727102
 stopTimer: Warning: Unable to cancel your timer
-Window moves 1
 
 EVENT time: 16106.045716727194  type: 1  entity: 0
 generateNextArrival(): called
@@ -2695,12 +2618,11 @@ A send packet with seqnum:81 for first time.
 EVENT time: 16114.532578508864  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 16124.234290597245  type: 2  entity: 0
 stopTimer: stopping timer at 16124.234290597245
-Window moves 1
 
 EVENT time: 16154.033021027251  type: 1  entity: 0
 generateNextArrival(): called
@@ -2719,12 +2641,11 @@ A send packet with seqnum:82 for first time.
 EVENT time: 16156.51237525559  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 16161.476088747822  type: 2  entity: 0
 stopTimer: stopping timer at 16161.476088747822
-Window moves 1
 
 EVENT time: 16501.32145146031  type: 1  entity: 0
 generateNextArrival(): called
@@ -2743,12 +2664,11 @@ A send packet with seqnum:83 for first time.
 EVENT time: 16509.922299874874  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 16512.72493667409  type: 2  entity: 0
 stopTimer: stopping timer at 16512.72493667409
-Window moves 1
 
 EVENT time: 16852.198858607746  type: 1  entity: 0
 generateNextArrival(): called
@@ -2767,12 +2687,11 @@ A send packet with seqnum:84 for first time.
 EVENT time: 16860.04547257912  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 16869.926267281106  type: 2  entity: 0
 stopTimer: stopping timer at 16869.926267281106
-Window moves 1
 
 EVENT time: 17064.546647541734  type: 1  entity: 0
 generateNextArrival(): called
@@ -2791,12 +2710,11 @@ A send packet with seqnum:85 for first time.
 EVENT time: 17065.67326883755  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 17072.08667256691  type: 2  entity: 0
 stopTimer: stopping timer at 17072.08667256691
-Window moves 1
 
 EVENT time: 17235.999633777887  type: 1  entity: 0
 generateNextArrival(): called
@@ -2815,7 +2733,7 @@ A send packet with seqnum:86 for first time.
 EVENT time: 17243.23071993164  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -2839,12 +2757,11 @@ A send packet with seqnum:87 for first time.
 EVENT time: 17272.405713064974  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 17276.00817896054  type: 2  entity: 0
 stopTimer: stopping timer at 17276.00817896054
-Window moves 2
 
 EVENT time: 17638.23358867153  type: 1  entity: 0
 generateNextArrival(): called
@@ -2863,12 +2780,11 @@ A send packet with seqnum:88 for first time.
 EVENT time: 17646.082399975585  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 17648.26209295938  type: 2  entity: 0
 stopTimer: stopping timer at 17648.26209295938
-Window moves 1
 
 EVENT time: 17688.10083315531  type: 1  entity: 0
 generateNextArrival(): called
@@ -2887,7 +2803,7 @@ A send packet with seqnum:89 for first time.
 EVENT time: 17689.49278237251  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: packet being lost
 
 EVENT time: 17718.10083315531  type: 0  entity: 0
@@ -2904,12 +2820,11 @@ startTimer: starting timer at 17718.10083315531
 EVENT time: 17720.085238196967  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 17729.208502456742  type: 2  entity: 0
 stopTimer: stopping timer at 17729.208502456742
-Window moves 1
 
 EVENT time: 17816.827906125065  type: 1  entity: 0
 generateNextArrival(): called
@@ -2944,12 +2859,11 @@ startTimer: starting timer at 17846.827906125065
 EVENT time: 17853.602496414074  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 17862.197027497175  type: 2  entity: 0
 stopTimer: stopping timer at 17862.197027497175
-Window moves 1
 
 EVENT time: 18090.81087679678  type: 1  entity: 0
 generateNextArrival(): called
@@ -2968,12 +2882,11 @@ A send packet with seqnum:91 for first time.
 EVENT time: 18098.225165562915  type: 2  entity: 1
 B send ack: 2(seqnum)
 
-toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload:
+toLayer3: seqnum: 2  acknum: 1  checksum: 3  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 18105.38209173864  type: 2  entity: 0
 stopTimer: stopping timer at 18105.38209173864
-Window moves 1
 
 EVENT time: 18454.860072634056  type: 1  entity: 0
 generateNextArrival(): called
@@ -2992,12 +2905,11 @@ A send packet with seqnum:92 for first time.
 EVENT time: 18456.225379192485  type: 2  entity: 1
 B send ack: 3(seqnum)
 
-toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload:
+toLayer3: seqnum: 3  acknum: 1  checksum: 4  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 18460.900967436755  type: 2  entity: 0
 stopTimer: stopping timer at 18460.900967436755
-Window moves 1
 
 EVENT time: 18528.971221045565  type: 1  entity: 0
 generateNextArrival(): called
@@ -3016,12 +2928,11 @@ A send packet with seqnum:93 for first time.
 EVENT time: 18538.135959959716  type: 2  entity: 1
 B send ack: 4(seqnum)
 
-toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload:
+toLayer3: seqnum: 4  acknum: 1  checksum: 5  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 18546.13528855251  type: 2  entity: 0
 stopTimer: stopping timer at 18546.13528855251
-Window moves 1
 
 EVENT time: 18725.57145908994  type: 1  entity: 0
 generateNextArrival(): called
@@ -3040,12 +2951,11 @@ A send packet with seqnum:94 for first time.
 EVENT time: 18728.667989135414  type: 2  entity: 1
 B send ack: 5(seqnum)
 
-toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload:
+toLayer3: seqnum: 5  acknum: 1  checksum: 6  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 18733.140324106575  type: 2  entity: 0
 stopTimer: stopping timer at 18733.140324106575
-Window moves 1
 
 EVENT time: 19056.92922757653  type: 1  entity: 0
 generateNextArrival(): called
@@ -3064,12 +2974,11 @@ A send packet with seqnum:95 for first time.
 EVENT time: 19059.616229743344  type: 2  entity: 1
 B send ack: 6(seqnum)
 
-toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload:
+toLayer3: seqnum: 6  acknum: 1  checksum: 7  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 19063.802087466054  type: 2  entity: 0
 stopTimer: stopping timer at 19063.802087466054
-Window moves 1
 
 EVENT time: 19427.8511917478  type: 1  entity: 0
 generateNextArrival(): called
@@ -3104,7 +3013,7 @@ startTimer: starting timer at 19457.8511917478
 EVENT time: 19465.475325785093  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: packet being corrupted
 toLayer3: scheduling arrival on other side
 
@@ -3126,12 +3035,11 @@ startTimer: starting timer at 19487.8511917478
 EVENT time: 19496.8563493759  type: 2  entity: 1
 B send ack: 7(seqnum)
 
-toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload:
+toLayer3: seqnum: 7  acknum: 1  checksum: 8  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 19503.166203802608  type: 2  entity: 0
 stopTimer: stopping timer at 19503.166203802608
-Window moves 1
 
 EVENT time: 19581.79876094852  type: 1  entity: 0
 generateNextArrival(): called
@@ -3150,12 +3058,11 @@ A send packet with seqnum:97 for first time.
 EVENT time: 19583.04870754113  type: 2  entity: 1
 B send ack: 8(seqnum)
 
-toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload:
+toLayer3: seqnum: 8  acknum: 1  checksum: 9  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 19584.126438184765  type: 2  entity: 0
 stopTimer: stopping timer at 19584.126438184765
-Window moves 1
 
 EVENT time: 19829.804376354263  type: 1  entity: 0
 generateNextArrival(): called
@@ -3174,12 +3081,11 @@ A send packet with seqnum:98 for first time.
 EVENT time: 19838.554368724635  type: 2  entity: 1
 B send ack: 0(seqnum)
 
-toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload:
+toLayer3: seqnum: 0  acknum: 1  checksum: 1  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 19842.554277169107  type: 2  entity: 0
 stopTimer: stopping timer at 19842.554277169107
-Window moves 1
 
 EVENT time: 19953.526413769956  type: 1  entity: 0
 generateNextArrival(): called
@@ -3198,12 +3104,11 @@ A send packet with seqnum:99 for first time.
 EVENT time: 19954.851344340346  type: 2  entity: 1
 B send ack: 1(seqnum)
 
-toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload:
+toLayer3: seqnum: 1  acknum: 1  checksum: 2  payload: 
 toLayer3: scheduling arrival on other side
 
 EVENT time: 19957.65837580493  type: 2  entity: 0
 stopTimer: stopping timer at 19957.65837580493
-Window moves 1
 
 EVENT time: 20124.515518662072  type: 1  entity: 0
 generateNextArrival(): called

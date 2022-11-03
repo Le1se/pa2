@@ -166,6 +166,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
             stopTimer(A);
             int last_send_base = A_windowHead;
             A_windowHead += (pSeq - currHead + LimitSeqNo)%LimitSeqNo;
+            System.out.println("Window moves "+(A_windowHead-last_send_base));
             for(int i=last_send_base;i<A_windowHead && i<ack_buffer.size();i++){
                     double tmptime = cacheRTT.get(A_windowHead-1);
                     if(tmptime != -1.0){
