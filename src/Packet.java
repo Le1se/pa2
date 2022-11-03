@@ -4,6 +4,7 @@ public class Packet
     private int acknum;
     private int checksum;
     private String payload;
+    private int[] sack={-1,-1,-1,-1,-1};
 
     public Packet(Packet p)
     {
@@ -13,8 +14,9 @@ public class Packet
         payload = new String(p.getPayload());
     }
 
-    public Packet(int seq, int ack, int check, String newPayload)
+    public Packet(int seq, int ack, int check, String newPayload, int[] sack)
     {
+        this.sack = sack;
         seqnum = seq;
         acknum = ack;
         checksum = check;
@@ -32,12 +34,13 @@ public class Packet
         }
     }
 
-    public Packet(int seq, int ack, int check)
+    public Packet(int seq, int ack, int check, int[] sack)
     {
         seqnum = seq;
         acknum = ack;
         checksum = check;
         payload = "";
+        this.sack = sack;
     }
 
 
@@ -97,6 +100,9 @@ public class Packet
     {
         return payload;
     }
+    public int[] getSack() { return this.sack;}
+
+    public void setSack(int[] sack) { this.sack = sack;}
 
     public String toString()
     {

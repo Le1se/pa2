@@ -63,7 +63,7 @@ public class Event
         else
         {
             packet = new Packet(p.getSeqnum(), p.getAcknum(),
-                    p.getChecksum(), p.getPayload());
+                    p.getChecksum(), p.getPayload(),p.getSack());
         }
 
         return true;
