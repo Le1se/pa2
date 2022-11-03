@@ -165,7 +165,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
             if(pSeq==currHead) return;
             stopTimer(A);
             int last_send_base = A_windowHead;
-            A_windowHead += (pSeq - currHead + LimitSeqNo)%LimitSeqNo;//cover case that packet seqnum<currHead
+            A_windowHead += (pSeq - currHead + LimitSeqNo)%LimitSeqNo;
             for(int i=last_send_base;i<A_windowHead && i<ack_buffer.size();i++){
                     double tmptime = cacheRTT.get(A_windowHead-1);
                     if(tmptime != -1.0){
@@ -178,6 +178,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
         }
         else{
             //packet corrupted
+            System.out.println("Packet corruption at A.\n");
             corruptNum++;
         }
     }
@@ -192,6 +193,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
                 if(ack_buffer.get(i)==0){
                     //it's a new packet in window which has not yet been sent
                     //update global variables
+                    System.out.println("A send packet with seqnum:"+i+" for first time.\n");
                     A_oringin++;
                     rttNum++;
                     commNum++;
@@ -199,6 +201,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
                 }else{
                     //it's a packet has been sent before
                     //undate A_resend variable
+                    System.out.println("A retransmits packet with seqnum:"+i+"\n");
                     A_retrans++;
                 }
                 //send the packet with its seqnum
@@ -225,6 +228,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
     protected void bInput(Packet packet) {
         if (packet.getChecksum() != checkSum(packet)) {
             //got corrupt packet
+            System.out.println("Packet corruption at B.\n");
             corruptNum++;
             return;
         }
@@ -260,9 +264,9 @@ public class StudentNetworkSimulator extends NetworkSimulator
         } else {
             int length = B_buffer.size();
             for (int i = 0; i < length; i++) {
-
                 if (pSeq == B_buffer.get(i).getSeqnum()) {
                     // packet is duplicate
+                    System.out.println("Packet duplicate at B.\n");
                     B_sendpkt(B_next, bSack);
                     return;
                 }
@@ -326,6 +330,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
             if (A_buffer.get(i) != null && ack_buffer.get(i) == 0) {
                 A_sendpkt(i);
                 A_oringin++;
+                System.out.println("A send packet with seqnum:"+i+" for first time.\n");
                 //for first time send
                 //put time to comm map and set pkt ack=1
                 ack_buffer.set(i,1);
@@ -344,6 +349,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
         }
     }
     private void A_sendpkt(int seqnum) {
+        System.out.println("A send pkt: "+seqnum+"(seqnum)\n");
         toLayer3(A, A_buffer.get(seqnum));
         cacheRTT.put(seqnum,getTime());
         stopTimer(A);
@@ -351,6 +357,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
     }
 
     private void B_sendpkt(int seqnum, int[] sack) {
+        System.out.println("B send ack: "+seqnum+"(seqnum)\n");
         Packet p = new Packet(seqnum, 1, seqnum + 1, sack);
         toLayer3(B, p);
         B_acknum++;
