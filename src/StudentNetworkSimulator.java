@@ -156,40 +156,17 @@ public class StudentNetworkSimulator extends NetworkSimulator
     // sent from the B-side.
     protected void aInput(Packet packet) {
         if(checkSum(packet) == packet.getChecksum()){
-            int send_base_Seq = A_windowHead % LimitSeqNo;
+            int currHead = A_windowHead % LimitSeqNo;
             for (int j : packet.getSack()) {
-                if (j != -1) ack_buffer.set(A_windowHead+(j-send_base_Seq+LimitSeqNo)%LimitSeqNo, 2);
+                if (j != -1) ack_buffer.set(A_windowHead+(j-currHead+LimitSeqNo)%LimitSeqNo, 2);
             }
-            int ack = packet.getSeqnum();
-            /* GBN send culmulative ack. Update send_abse according to the ack*/
+            int pSeq = packet.getSeqnum();
             rttNum++;
-            if(ack < send_base_Seq){ // Since the sequence number is wrapped so am the ack number.
-                stopTimer(A);        // The situation that ack number is less than Send base can occur
-                int last_send_base = A_windowHead;
-                A_windowHead += LimitSeqNo - send_base_Seq + ack; // update send_base when ack number is less than Send base can occur
-                System.out.println("send_base after update "+A_windowHead);
-                for(int i=last_send_base;i<A_windowHead && i<ack_buffer.size();i++){//Check the acks in SACK
-                    ack_buffer.set(i,2);                                         //update status of the packets that are acked in SACK to 2,
-                    // meaning this packet has been acked so that it will not be retransmitted
-                    double tmptime = cacheRTT.get(A_windowHead-1);
-                    if(tmptime != -1.0){
-                        rtt += getTime() - tmptime;
-                        cacheRTT.put(last_send_base,-1.0);
-                        // rttCount++;
-                    }
-                    comm += getTime() - cacheComm.get(last_send_base);
-                    commNum++;
-
-                }
-            }
-            else if(send_base_Seq < ack){ // Normal situation that ack is larger than send_base seq
-                stopTimer(A);
-                int last_send_base = A_windowHead;
-                A_windowHead += ack-send_base_Seq; // update send_base
-                System.out.println("send_base after update "+A_windowHead);
-                for(int i=last_send_base;i<A_windowHead && i<ack_buffer.size();i++){ //Check the acks in SACK
-                    ack_buffer.set(i,2);                                          //update status of the packets that are acked in SACK to 2,
-                    // meaning this packet has been acked so that it will not be retransmitted
+            if(pSeq==currHead) return;
+            stopTimer(A);
+            int last_send_base = A_windowHead;
+            A_windowHead += (pSeq - currHead + LimitSeqNo)%LimitSeqNo;//cover case that packet seqnum<currHead
+            for(int i=last_send_base;i<A_windowHead && i<ack_buffer.size();i++){
                     double tmptime = cacheRTT.get(A_windowHead-1);
                     if(tmptime != -1.0){
                         rtt += getTime() - tmptime;
@@ -197,10 +174,7 @@ public class StudentNetworkSimulator extends NetworkSimulator
                     }
                     comm += getTime() - cacheComm.get(last_send_base);
                     commNum++;
-
                 }
-            }
-
         }
         else{
             //packet corrupted
@@ -250,128 +224,70 @@ public class StudentNetworkSimulator extends NetworkSimulator
     // sent from the A-side.
     protected void bInput(Packet packet) {
         if (packet.getChecksum() != checkSum(packet)) {
-            System.out.println("bInput(): B getting a corrupted pkt");
+            //got corrupt packet
             corruptNum++;
             return;
         }
+        int pSeq=packet.getSeqnum();
 
-        System.out.println("bInput(): B getting pkt" + packet.getSeqnum() + ", expecting pkt" + B_next);
-
-        int this_seqnum = packet.getSeqnum();
-
-        // if packet is duplicate and ACKed before NPE
-        if (((this_seqnum < B_next) && ((B_next - this_seqnum) <= WindowSize))
-                || ((this_seqnum > B_next) && ((this_seqnum - B_next) >= WindowSize))) {
+        if ((pSeq < B_next && (B_next - pSeq <= WindowSize))
+                || (pSeq > B_next && (pSeq - B_next>= WindowSize))) {
             B_sendpkt(B_next, bSack);
-            return;
-        }
-
-        // if the size of sack is 0, the operation will be easy and I take it out as one part alone
-        if (B_buffer.size() == 0) {
-            if (this_seqnum == B_next) {
+        } else if ((pSeq != B_next) && (B_buffer.size() == 5)) {
+            B_sendpkt(B_next, bSack);
+        } else if (pSeq == B_next) {
+                // if the sack is not full
+                //move next B ptr
                 B_next = (B_next + 1) % LimitSeqNo;
-                B_sendpkt(B_next, bSack);
                 toLayer5(packet.getPayload());
                 B_deliver5 ++;
-            } else {
+                //B buffer empty, just send
+                if (B_buffer.size() != 0) {
+                    B_sendpkt(B_next, bSack);
+                    while (B_buffer.size() != 0 && B_buffer.get(0).getSeqnum() == B_next) {
+                        toLayer5(packet.getPayload());
+                        B_deliver5++;
+                        B_next = (B_next + 1) % LimitSeqNo;
+                        B_buffer.remove(0);
+                    }
+                    if (B_buffer.size() == 0) {
+                        Arrays.fill(bSack, -1);
+                    } else {
+                        B_setSack();
+                    }
+                }
+                B_sendpkt(B_next, bSack);
+        } else {
+            int length = B_buffer.size();
+            for (int i = 0; i < length; i++) {
+
+                if (pSeq == B_buffer.get(i).getSeqnum()) {
+                    // packet is duplicate
+                    B_sendpkt(B_next, bSack);
+                    return;
+                }
+                if (pSeq > B_next) {
+                   if ((B_buffer.get(i).getSeqnum() > B_next && pSeq < B_buffer.get(i).getSeqnum())
+                            || B_buffer.get(i).getSeqnum() < B_next) {
+                       B_buffer.add(i, packet);
+                       break;
+                   }
+                } else if (pSeq < B_next){
+                    if(B_buffer.get(i).getSeqnum() < B_next|| pSeq < B_buffer.get(i).getSeqnum()){
+                        B_buffer.add(i, packet);
+                        break;
+                    }
+                }
+
+            }
+            if (B_buffer.size() == length) {
                 B_buffer.add(packet);
-                bSack[0] = packet.getSeqnum();
-                B_sendpkt(B_next, bSack);
             }
-        }
-        // if the sack is full and this_seqnum doesn't equal to NPE, just drop it and send ACK
-        else if ((this_seqnum != B_next) && (B_buffer.size() == 5))
-        {
+            B_setSack();
             B_sendpkt(B_next, bSack);
         }
-        // if the sack is not full
-        else
-        {
-            // if receive the expected packet, send cum ACK with an appropriate SACK
-            if (this_seqnum == B_next)
-            {
-                B_next = (B_next + 1) % LimitSeqNo;
-                toLayer5(packet.getPayload());
-                B_deliver5 ++;
-                while (B_buffer.size() != 0&&B_buffer.get(0).getSeqnum() == B_next) {
 
-                    toLayer5(packet.getPayload());
-                    B_deliver5 ++;
-                    B_next = (B_next + 1) % LimitSeqNo;
-                    B_buffer.remove(0);
-                }
-
-                // set sack
-                if (B_buffer.size() == 0) {
-                    for (int i = 0; i < 5; i++) {
-                        bSack[i] = -1;
-                    }
-                }
-                else
-                {
-                    int length1 = B_buffer.size();
-                    for (int i = 0; i < 5; i++)
-                    {
-                        if (i < length1)
-                        {
-                            bSack[i] = B_buffer.get(i).getSeqnum();
-                        }
-                        bSack[i] = -1;
-                    }
-                }
-
-                B_sendpkt(B_next, bSack);
-            }
-            // if receive the unexpected packet, send ACK NPE with a changed SACK
-            else
-            {
-                // set sack_buffer
-                int sack_buffer_length = B_buffer.size();
-                for (int i = 0; i < sack_buffer_length; i++)
-                {
-                    // if packet is duplicate and ACKed after NPE
-                    if (this_seqnum == B_buffer.get(i).getSeqnum())
-                    {
-                        B_sendpkt(B_next, bSack);
-                        return;
-                    }
-
-                    if ((this_seqnum > B_next)
-                            && (((B_buffer.get(i).getSeqnum() > B_next) && (this_seqnum < B_buffer.get(i).getSeqnum()))
-                            || (B_buffer.get(i).getSeqnum() < B_next)))
-                    {
-                        B_buffer.add(i, packet);
-                        break;
-                    }
-                    else if ((this_seqnum < B_next)
-                            && ((B_buffer.get(i).getSeqnum() < B_next)
-                            || (this_seqnum < B_buffer.get(i).getSeqnum())))
-                    {
-                        B_buffer.add(i, packet);
-                        break;
-                    }
-
-                }
-                if (B_buffer.size() == sack_buffer_length)
-                {
-                    B_buffer.add(packet);
-                }
-
-                // set sack
-                int length2 = B_buffer.size();
-                for (int i = 0; i < 5; i++)
-                {
-                    if (i < length2)
-                    {
-                        bSack[i] = B_buffer.get(i).getSeqnum();
-                    }
-                    bSack[i] = -1;
-                }
-                B_sendpkt(B_next, bSack);
-            }
-        }
     }
-
     // This routine will be called once, before any of your other B-side
     // routines are called. It can be used to do any required
     // initialization (e.g. of member variables you add to control the state
@@ -418,6 +334,14 @@ public class StudentNetworkSimulator extends NetworkSimulator
             A_last=i+1;
         }
 
+    }
+    private void B_setSack(){
+        for (int i = 0; i < 5; i++) {
+            if (i < B_buffer.size()) {
+                bSack[i] = B_buffer.get(i).getSeqnum();
+            }
+            bSack[i] = -1;
+        }
     }
     private void A_sendpkt(int seqnum) {
         toLayer3(A, A_buffer.get(seqnum));
